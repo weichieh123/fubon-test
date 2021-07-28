@@ -29,9 +29,9 @@ nav a {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 320px){
+@media (max-width: 576px){
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   h2 {
     font-size: 1rem;
@@ -90,11 +90,12 @@ nav a {
 /* nav */
 nav {
   width: 100%;
-  border-bottom: 1px gray;
+  border-top: 4px solid #02AFB7;
+  border-bottom: 3px solid rgba(182, 174, 174, 0.699);
 }
 
 nav .container {
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 .nav-selector a:not(:last-child)::after {
@@ -122,7 +123,6 @@ nav .container {
     height: 300px;
   }
 }
-
 .heroBtn {
   width: 200px;
   height: 55px;
@@ -147,6 +147,18 @@ nav .container {
   background-size: cover;
   background-position: center;
 
+}
+@media (max-width: 576px) {
+  .heroBtn {
+    width: 50px;
+    height: 50px;
+  }
+  .androidBtn {
+    background-image: url(./img/google-play.svg);
+  }
+  .iosBtn {
+    background-image: url(./img/apple.svg);
+  }
 }
 
 .mainBtnRow {
@@ -187,14 +199,30 @@ nav .container {
     padding: 0;
     margin: 10px;
   }
-  .mainBtnText {
-    /* display: none; */
-  }
 }
 @media (max-width: 768px) {
   .mainBtn{
     width: 80px;
     height: 80px;
+    margin: 0 15px;
+  }
+  .mainBtnIcon {
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    border-right: none;
+    padding: 0;
+    margin: 10px;
+  }
+  .mainBtnText {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .mainBtn{
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
   }
   .mainBtnIcon {
     width: 40px;
@@ -250,9 +278,19 @@ nav .container {
 }
 
 .notes ol {
-  margin: 0 80px;
+  margin: 0 60px;
   display: inline-block;
   text-align: start;
+}
+@media (max-width: 768px) {
+  .notes ol {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .notes ol {
+    margin: 0 10px;
+  }
 }
 
 .notes-version {
