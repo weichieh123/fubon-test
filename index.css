@@ -21,6 +21,22 @@ nav a {
   font-weight: bold;
   color: #58A4EF;
 }
+@media (max-width: 768px){
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 320px){
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
 
 /* fonts end */
 /* fixed area */
@@ -29,6 +45,11 @@ nav a {
   right: 10px;
   bottom: 50px;
   z-index: 99;
+}
+@media (max-width: 768px){
+  .fixedBtnRow {
+    display: none;
+  }
 }
 
 .fastBtn {
@@ -96,16 +117,36 @@ nav .container {
   background-size: cover;
   padding: 15vw;
 }
+@media (max-width: 768px) {
+  .hero-section {
+    height: 300px;
+  }
+}
 
 .heroBtn {
   width: 200px;
-  height: 65px;
+  height: 55px;
   margin: 10px;
-  padding: 5px;
-  background-color: #fff;
+  padding: 10px;
   border-radius: 50px;
-  /* display: inline-block; */
-  /* vertical-align: middle; */
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.androidBtn {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/android-2.svg);
+  background-size: cover;
+  background-position: center;
+}
+.iosBtn {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/available-on-the-app-store.svg);
+  background-size: cover;
+  background-position: center;
+
 }
 
 .mainBtnRow {
@@ -133,7 +174,23 @@ nav .container {
   padding-right: 25px;
   border-right: 3px dotted gray;
 }
-
+@media (max-width: 992px) {
+  .mainBtn{
+    width: 200px;
+    height: 94px;
+  }
+  .mainBtnIcon {
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    border-right: none;
+    padding: 0;
+    margin: 10px;
+  }
+  .mainBtnText {
+    /* display: none; */
+  }
+}
 @media (max-width: 768px) {
   .mainBtn{
     width: 80px;
@@ -147,9 +204,6 @@ nav .container {
     padding: 0;
     margin: 10px;
   }
-  /* .mainBtnIcon img {
-    display: block;
-  } */
   .mainBtnText {
     display: none;
   }
@@ -166,16 +220,15 @@ nav .container {
 }
 
 .eventCard {
-  margin: 30px 0;
-}
-
-.eventImg {
+  margin: 50px 0;
   /* height: 230px; */
-  height: 100%;
+  border: 2px solid rgba(202, 202, 202, 0.445);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.eventImg {
   overflow: hidden;
   padding: 0;
-  /* object-fit: cover; */
-
 }
 .cover {
   height: 100%; 
@@ -185,7 +238,15 @@ nav .container {
 
 .eventInfo {
   background-color: #ECF8FF;
-  padding: 0 60px;
+  padding: 20px 60px;
+}
+@media (max-width: 768px){
+  #ev2-info {
+    order:2;
+  }
+  #ev2-img {
+    order:1;
+  }
 }
 
 .notes ol {
@@ -215,4 +276,10 @@ footer {
   content: ' | ';
   display: inline-block;
   width: 20px;
+}
+
+@media (max-width: 768px){
+  .footer-links small:not(:last-child)::after {
+    content: '';
+  }
 }
